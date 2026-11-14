@@ -1,0 +1,37 @@
+<!-- Replace data-source after deployment and data-current-id on each product page. -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;500;600&display=swap" rel="stylesheet">
+<section class="tt-related" data-current-id="REPLACE_CURRENT_PRODUCT_ID" data-source="https://teemtec-products.pages.dev/products.json" hidden aria-label="Related Products">
+<h2>Related Products</h2><div class="tt-grid"></div>
+</section>
+<style>
+.tt-related{font-family:Sora,sans-serif;max-width:1320px;margin:auto;padding:24px 12px 36px;container-type:inline-size;color:#303433}.tt-related[hidden]{display:none}.tt-related *{box-sizing:border-box}.tt-related h2{text-align:center;font-size:clamp(25px,3vw,38px);font-weight:600;margin:0 0 32px}.tt-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:24px}.tt-card{display:flex;flex-direction:column;padding:22px;background:#f6f7f9;border-radius:16px;text-decoration:none;color:inherit;transition:transform .2s}.tt-card:hover{transform:translateY(-4px)}.tt-card:focus-visible{outline:3px solid #237c48;outline-offset:3px}.tt-media{aspect-ratio:1;background:white;border-radius:10px;display:grid;place-items:center;overflow:hidden;color:#777;font-size:13px}.tt-media img{width:100%;height:100%;object-fit:contain}.tt-card h3{font-size:18px;line-height:1.5;margin:20px 0 8px}.tt-card p{font-size:14px;line-height:1.7;margin:0}.tt-link{margin-top:18px;font-size:13px}@container(max-width:900px){.tt-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}@container(max-width:560px){.tt-grid{grid-template-columns:1fr}}@media(prefers-reduced-motion:reduce){.tt-card{transition:none}.tt-card:hover{transform:none}}
+</style>
+<script>
+(()=>{
+ const root=document.currentScript.previousElementSibling.previousElementSibling;
+ const safeURL=value=>{try{const u=new URL(value);return u.protocol==='https:'?u.href:null}catch{return null}};
+ async function load(){
+  try{
+   const source=safeURL(root.dataset.source);if(!source)return;
+   const response=await fetch(source,{credentials:'omit',signal:AbortSignal.timeout(12000)});if(!response.ok)throw Error('Catalog unavailable');
+   const data=await response.json();if(!Array.isArray(data.products))return;
+   const current=data.products.find(p=>p.id===root.dataset.currentId);if(!current)return;
+   const seen=new Set([current.id]);
+   const products=data.products.filter(p=>{if(!p.id||seen.has(p.id)||p.category!==current.category||p.status!=='published'||!p.name||!safeURL(p.url))return false;seen.add(p.id);return true}).slice(0,3);
+   if(!products.length)return;
+   for(const p of products){
+    const a=document.createElement('a');a.className='tt-card';a.href=safeURL(p.url);a.target='_top';
+    const media=document.createElement('div');media.className='tt-media';media.textContent='Image coming soon';
+    const src=safeURL(p.image);if(src){const img=document.createElement('img');img.src=src;img.alt=p.name;img.loading='lazy';img.addEventListener('error',()=>{media.textContent='Image coming soon'},{once:true});media.replaceChildren(img)}
+    const title=document.createElement('h3');title.textContent=p.name;a.append(media,title);
+    if(p.description){const desc=document.createElement('p');desc.textContent=p.description;a.append(desc)}
+    const label=document.createElement('span');label.className='tt-link';label.textContent='View product →';a.append(label);root.querySelector('.tt-grid').append(a);
+   }
+   root.hidden=false;
+  }catch(error){console.warn('Related products could not load.',error)}
+ }
+ load();
+})();
+</script>
