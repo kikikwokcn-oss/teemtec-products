@@ -1,0 +1,54 @@
+<!-- Copy the ENTIRE file into Hostinger Embed Code. Change only data-product-id.
+     Use data-view="specs" or "related" to place the modules separately. -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;500;600&display=swap" rel="stylesheet">
+<div class="tt-product" data-product-id="REPLACE_PRODUCT_ID" data-view="both" data-source="https://teemtec-products.pages.dev/products.json">
+  <p class="tt-status" role="status">Loading product information…</p>
+  <section class="tt-specs" hidden aria-label="Technical Specifications">
+    <div class="tt-glass"><div class="tt-scroll" tabindex="0" role="region" aria-label="Scrollable technical specifications"><dl></dl></div><span class="tt-track" aria-hidden="true"><i></i></span></div>
+  </section>
+  <section class="tt-related" hidden aria-label="Related Products"><h2>Related Products</h2><div class="tt-grid"></div></section>
+</div>
+<style>
+.tt-product{font-family:Sora,sans-serif;color:#303832;max-width:1160px;margin:auto;container-type:inline-size;width:100%}.tt-product *{box-sizing:border-box}.tt-product [hidden]{display:none!important}.tt-product .tt-status{font-size:14px;padding:20px}.tt-product .tt-glass{position:relative;border:1px solid rgba(255,255,255,.78);border-radius:16px;overflow:hidden;background:linear-gradient(135deg,rgba(255,255,255,.72),rgba(239,243,245,.48));backdrop-filter:blur(18px) saturate(140%);-webkit-backdrop-filter:blur(18px) saturate(140%);box-shadow:0 8px 30px #1c2d2609}.tt-product .tt-scroll{max-height:560px;overflow-y:auto;padding:14px 26px;scrollbar-width:thin;scrollbar-color:#ff8428 #c8d2cd59;scrollbar-gutter:stable;overscroll-behavior-y:contain}.tt-product .tt-scroll::-webkit-scrollbar{width:7px}.tt-product .tt-scroll::-webkit-scrollbar-thumb{background:#ff8428;border-radius:10px}.tt-product .tt-scroll::-webkit-scrollbar-track{background:#c8d2cd59}.tt-product dl{position:relative;margin:0}.tt-product dl::before{content:"";position:absolute;left:44%;top:0;bottom:0;border-left:1px dashed #9199948c}.tt-product .tt-row{display:grid;grid-template-columns:44% 56%;font-size:14px;line-height:1.75}.tt-product dt{padding:17px 24px 17px 0;color:#777d79}.tt-product dd{padding:17px 0 17px 24px;margin:0;white-space:pre-line;overflow-wrap:anywhere}.tt-product dt{overflow-wrap:anywhere}.tt-product .tt-track{position:absolute;right:4px;top:14px;bottom:14px;width:3px;background:#c8d2cd59;border-radius:8px;pointer-events:none}.tt-product .tt-track i{display:block;position:absolute;width:100%;background:#ff8428;border-radius:8px}.tt-product .tt-related{padding:34px 0}.tt-product h2{text-align:center;font-size:clamp(24px,3vw,36px);margin:0 0 28px}.tt-product .tt-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:22px}.tt-product .tt-card{display:flex;flex-direction:column;background:#f6f7f9;border-radius:16px;padding:20px;color:inherit;text-decoration:none;min-width:0}.tt-product .tt-media{aspect-ratio:1;background:#fff;border-radius:10px;display:grid;place-items:center;overflow:hidden;color:#777;font-size:13px}.tt-product img{width:100%;height:100%;object-fit:contain}.tt-product h3{font-size:18px;line-height:1.5;margin:18px 0 8px;overflow-wrap:anywhere}.tt-product .tt-card p{font-size:14px;line-height:1.7;margin:0;overflow-wrap:anywhere}.tt-product .tt-more{color:#b84d00;margin-top:20px;font-size:13px}.tt-product a:focus-visible,.tt-product .tt-scroll:focus-visible{outline:3px solid #ff8428;outline-offset:3px}@container(max-width:900px){.tt-product .tt-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}@container(max-width:560px){.tt-product .tt-scroll{max-height:420px;padding:10px 18px}.tt-product .tt-row{font-size:12px}.tt-product dt{padding:14px 12px 14px 0}.tt-product dd{padding:14px 0 14px 12px}.tt-product .tt-grid{grid-template-columns:1fr}}
+</style>
+<script>
+(()=>{
+ const root=document.currentScript.previousElementSibling.previousElementSibling;
+ const status=root.querySelector('.tt-status'), specs=root.querySelector('.tt-specs'), related=root.querySelector('.tt-related');
+ const text=v=>typeof v==='string'?v.trim():(typeof v==='number'||typeof v==='boolean'?String(v):'');
+ const url=v=>{try{const u=new URL(v);return u.protocol==='https:'&&!u.username&&!u.password?u.href:null}catch{return null}};
+ const node=(tag,value,cls)=>{const e=document.createElement(tag);if(value!==undefined)e.textContent=value;if(cls)e.className=cls;return e};
+ const rows=s=>{const a=Array.isArray(s)?s:(s&&typeof s==='object'?Object.entries(s):[]);return a.map(r=>Array.isArray(r)?r:[r?.label,r?.value]).map(([k,v])=>[text(k),text(v)]).filter(([k,v])=>k&&v)};
+ const controller=new AbortController(), timer=setTimeout(()=>controller.abort(),15000);
+ (async()=>{try{
+  const source=url(root.dataset.source);if(!source)throw Error('Invalid source');
+  const res=await fetch(source,{signal:controller.signal,credentials:'omit',cache:'no-cache'});if(!res.ok)throw Error('HTTP '+res.status);
+  const data=await res.json();if(data.schemaVersion!==1||!Array.isArray(data.products))throw Error('Invalid catalog');
+  const ids=new Set();for(const p of data.products){if(!p||typeof p.id!=='string'||!p.id.trim()||ids.has(p.id))throw Error('Invalid or duplicate product ID');ids.add(p.id)}
+  const current=data.products.find(p=>p.id===root.dataset.productId&&p.status==='published');
+  if(!current){status.textContent='Product information is not available yet.';return}
+  const view=root.dataset.view||'both';
+  if(view!=='related'){
+   const list=rows(current.specifications);if(list.length){const dl=specs.querySelector('dl');for(const [key,value] of list){const r=node('div',undefined,'tt-row');r.append(node('dt',key),node('dd',value));dl.append(r)}specs.hidden=false;
+   const scroll=specs.querySelector('.tt-scroll'), track=specs.querySelector('.tt-track'), thumb=track.querySelector('i');
+   const update=()=>{const max=scroll.scrollHeight-scroll.clientHeight;track.hidden=max<=1;if(max>1){const h=Math.max(24,track.clientHeight*scroll.clientHeight/scroll.scrollHeight);thumb.style.height=h+'px';thumb.style.top=(track.clientHeight-h)*scroll.scrollTop/max+'px'}};
+   scroll.addEventListener('scroll',update,{passive:true});if(typeof ResizeObserver!=='undefined'){const ob=new ResizeObserver(update);ob.observe(scroll);ob.observe(dl)}else window.addEventListener('resize',update);requestAnimationFrame(update);if(document.fonts)document.fonts.ready.then(update);
+   }
+  }
+  if(view!=='specs'){
+   const page=url(current.url), seen=new Set(page?[page]:[]), explicit=Array.isArray(current.relatedProductIds)?current.relatedProductIds:[];
+   const byId=new Map(data.products.map(p=>[p.id,p]));
+   const candidates=[...explicit.map(id=>byId.get(id)),...data.products.filter(p=>current.category&&p.category===current.category)];
+   const grid=related.querySelector('.tt-grid');let count=0;
+   for(const p of candidates){if(!p||p.id===current.id||p.status!=='published'||!text(p.name))continue;const href=url(p.url);if(!href||seen.has(href))continue;seen.add(href);
+    const card=node('a',undefined,'tt-card');card.href=href;card.target='_top';
+    const media=node('div','Image coming soon','tt-media'), image=url(p.image);if(image){const img=node('img');img.src=image;img.alt=text(p.name);img.loading='lazy';img.addEventListener('error',()=>media.replaceChildren(node('span','Image coming soon')),{once:true});media.replaceChildren(img)}
+    card.append(media,node('h3',text(p.name)),node('p',text(p.description)),node('span','Read More →','tt-more'));grid.append(card);if(++count===3)break;
+   }related.hidden=count===0;
+  }
+  status.hidden=!specs.hidden||!related.hidden;if(!status.hidden)status.textContent='Product information is not available yet.';
+ }catch(err){specs.hidden=true;related.hidden=true;status.hidden=false;status.textContent='Product information is temporarily unavailable. Please try again later.';console.warn('TEEMTEC catalog:',err.message)}finally{clearTimeout(timer)}})();
+})();
+</script>
