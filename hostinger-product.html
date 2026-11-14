@@ -15,7 +15,9 @@
 </style>
 <script>
 (()=>{
- const root=document.currentScript.previousElementSibling.previousElementSibling;
+ let root=document.currentScript.previousElementSibling;
+ if(root?.tagName==='STYLE')root=root.previousElementSibling;
+ if(!root?.matches('.tt-product'))return;
  const status=root.querySelector('.tt-status'), specs=root.querySelector('.tt-specs'), related=root.querySelector('.tt-related');
  const text=v=>typeof v==='string'?v.trim():(typeof v==='number'||typeof v==='boolean'?String(v):'');
  const url=v=>{try{const u=new URL(v);return u.protocol==='https:'&&!u.username&&!u.password?u.href:null}catch{return null}};
