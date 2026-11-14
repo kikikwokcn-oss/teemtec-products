@@ -26,5 +26,571 @@
       "name": "Solar Accessories"
     }
   ],
-  "products": []
+  "products": [
+    {
+      "id": "bat-bss-series",
+      "category": "residential-batteries",
+      "name": "TEEMTEC BAT-BSS 100/280/314",
+      "description": "TEEMTEC BSS Series LiFePO4 batteries in 100Ah, 280Ah and 314Ah configurations.",
+      "image": null,
+      "url": null,
+      "status": "published",
+      "specifications": [
+        [
+          "Product Model",
+          "BAT-BSS-100 / BAT-BSS-280 / BAT-BSS-314"
+        ],
+        [
+          "Nominal Capacity",
+          "100Ah / 280Ah / 314Ah"
+        ],
+        [
+          "Nominal Voltage",
+          "51.2V"
+        ],
+        [
+          "Battery Type",
+          "LiFePO4 Battery"
+        ],
+        [
+          "Cycle Life",
+          "100Ah: ≥6000 Cycles\n280Ah / 314Ah: ≥8000 Cycles\nTest conditions: 25°C ± 2°C, 0.5C charge–discharge, DOD ≥ 80%"
+        ],
+        [
+          "Operating Voltage Range",
+          "43.2–57.6V"
+        ],
+        [
+          "Max. Charging Current",
+          "100Ah: 100A\n280Ah / 314Ah: 200A"
+        ],
+        [
+          "Max. Discharging Current",
+          "100Ah: 100A\n280Ah / 314Ah: 200A"
+        ],
+        [
+          "Recommended Discharge Current",
+          "100Ah: ≤50A\n280Ah / 314Ah: ≤100A"
+        ],
+        [
+          "Recommended Charging Current",
+          "280Ah / 314Ah: ≤100A"
+        ],
+        [
+          "Communication Interface",
+          "CAN / RS485 / RS232"
+        ],
+        [
+          "Charge Temperature",
+          "0°C to 55°C"
+        ],
+        [
+          "Discharge Temperature",
+          "−10°C to 55°C"
+        ],
+        [
+          "Ingress Protection Rating",
+          "IP21"
+        ],
+        [
+          "Max. Parallel Connections",
+          "16 Units"
+        ],
+        [
+          "Humidity",
+          "0%–95% (Non-condensing)"
+        ],
+        [
+          "Warranty",
+          "5 Years"
+        ],
+        [
+          "Installation Type",
+          "100Ah: Wall Mounted\n280Ah / 314Ah: Floor Standing"
+        ],
+        [
+          "Dimensions",
+          "100Ah: 600 × 245 × 430mm\n280Ah / 314Ah: 485 × 246 × 780mm"
+        ],
+        [
+          "Net Weight",
+          "100Ah: 55kg\n280Ah: 118kg\n314Ah: 131kg"
+        ]
+      ],
+      "relatedProductIds": [],
+      "source": {
+        "pages": [
+          8,
+          9
+        ],
+        "checkedAt": "2026-11-14",
+        "designId": "DAHSntvAMxc"
+      }
+    },
+    {
+      "id": "bat-bss-100",
+      "category": "residential-batteries",
+      "name": "TEEMTEC BAT-BSS-100",
+      "description": "100Ah, 51.2V LiFePO4 residential energy storage battery.",
+      "image": null,
+      "url": null,
+      "status": "published",
+      "specifications": [
+        [
+          "Product Model",
+          "BAT-BSS-100"
+        ],
+        [
+          "Nominal Capacity",
+          "100Ah"
+        ],
+        [
+          "Nominal Voltage",
+          "51.2V"
+        ],
+        [
+          "Battery Type",
+          "LiFePO4 Battery"
+        ],
+        [
+          "Cycle Life",
+          "≥6000 Cycles (25°C ± 2°C, 0.5C charge–discharge, DOD ≥ 80%)"
+        ],
+        [
+          "Operating Voltage Range",
+          "43.2–57.6V"
+        ],
+        [
+          "Max. Charging Current",
+          "100A"
+        ],
+        [
+          "Max. Discharging Current",
+          "100A"
+        ],
+        [
+          "Recommended Discharge Current",
+          "≤50A"
+        ],
+        [
+          "Communication Interface",
+          "CAN / RS485 / RS232"
+        ],
+        [
+          "Charge Temperature",
+          "0°C to 55°C"
+        ],
+        [
+          "Discharge Temperature",
+          "−10°C to 55°C"
+        ],
+        [
+          "Ingress Protection Rating",
+          "IP21"
+        ],
+        [
+          "Max. Parallel Connections",
+          "16 Units"
+        ],
+        [
+          "Humidity",
+          "0%–95% (Non-condensing)"
+        ],
+        [
+          "Warranty",
+          "5 Years"
+        ],
+        [
+          "Installation Type",
+          "Wall Mounted"
+        ],
+        [
+          "Dimensions",
+          "600 × 245 × 430mm"
+        ],
+        [
+          "Net Weight",
+          "55kg"
+        ]
+      ],
+      "relatedProductIds": [],
+      "source": {
+        "page": 8,
+        "checkedAt": "2026-11-14",
+        "designId": "DAHSntvAMxc"
+      }
+    },
+    {
+      "id": "bat-bss-200",
+      "category": "residential-batteries",
+      "name": "TEEMTEC BAT-BSS-200",
+      "description": "200Ah, 51.2V LiFePO4 residential energy storage battery.",
+      "image": null,
+      "url": null,
+      "status": "published",
+      "specifications": [
+        [
+          "Product Model",
+          "BAT-BSS-200"
+        ],
+        [
+          "Nominal Capacity",
+          "200Ah"
+        ],
+        [
+          "Nominal Voltage",
+          "51.2V"
+        ],
+        [
+          "Battery Type",
+          "LiFePO4 Battery"
+        ],
+        [
+          "Cycle Life",
+          "≥6000 Cycles (25°C ± 2°C, 0.5C charge–discharge, DOD ≥ 80%)"
+        ],
+        [
+          "Operating Voltage Range",
+          "43.2–57.6V"
+        ],
+        [
+          "Max. Charging Current",
+          "200A"
+        ],
+        [
+          "Max. Discharging Current",
+          "200A"
+        ],
+        [
+          "Recommended Discharge Current",
+          "≤100A"
+        ],
+        [
+          "Communication Interface",
+          "CAN / RS485 / RS232"
+        ],
+        [
+          "Charge Temperature",
+          "0°C to 55°C"
+        ],
+        [
+          "Discharge Temperature",
+          "−10°C to 55°C"
+        ],
+        [
+          "Ingress Protection Rating",
+          "IP21"
+        ],
+        [
+          "Max. Parallel Connections",
+          "16 Units"
+        ],
+        [
+          "Humidity",
+          "0%–95% (Non-condensing)"
+        ],
+        [
+          "Warranty",
+          "5 Years"
+        ],
+        [
+          "Installation Type",
+          "Wall Mounted"
+        ],
+        [
+          "Dimensions",
+          "485 × 245 × 780mm"
+        ],
+        [
+          "Net Weight",
+          "93kg"
+        ]
+      ],
+      "relatedProductIds": [],
+      "source": {
+        "page": 8,
+        "checkedAt": "2026-11-14",
+        "designId": "DAHSntvAMxc"
+      }
+    },
+    {
+      "id": "bat-bss-280",
+      "category": "residential-batteries",
+      "name": "TEEMTEC BAT-BSS-280",
+      "description": "280Ah, 51.2V LiFePO4 residential energy storage battery.",
+      "image": null,
+      "url": null,
+      "status": "published",
+      "specifications": [
+        [
+          "Product Model",
+          "BAT-BSS-280"
+        ],
+        [
+          "Nominal Capacity",
+          "280Ah"
+        ],
+        [
+          "Nominal Voltage",
+          "51.2V"
+        ],
+        [
+          "Battery Type",
+          "LiFePO4 Battery"
+        ],
+        [
+          "Cycle Life",
+          "≥8000 Cycles (25°C ± 2°C, 0.5C charge–discharge, DOD ≥ 80%)"
+        ],
+        [
+          "Operating Voltage Range",
+          "43.2–57.6V"
+        ],
+        [
+          "Max. Charging Current",
+          "200A"
+        ],
+        [
+          "Max. Discharging Current",
+          "200A"
+        ],
+        [
+          "Recommended Charge / Discharge Current",
+          "≤100A"
+        ],
+        [
+          "Communication Interface",
+          "CAN / RS485 / RS232"
+        ],
+        [
+          "Charge Temperature",
+          "0°C to 55°C"
+        ],
+        [
+          "Discharge Temperature",
+          "−10°C to 55°C"
+        ],
+        [
+          "Ingress Protection Rating",
+          "IP21"
+        ],
+        [
+          "Max. Parallel Connections",
+          "16 Units"
+        ],
+        [
+          "Humidity",
+          "0%–95% (Non-condensing)"
+        ],
+        [
+          "Warranty",
+          "5 Years"
+        ],
+        [
+          "Installation Type",
+          "Floor Standing"
+        ],
+        [
+          "Dimensions",
+          "485 × 246 × 780mm"
+        ],
+        [
+          "Net Weight",
+          "118kg"
+        ]
+      ],
+      "relatedProductIds": [],
+      "source": {
+        "page": 9,
+        "checkedAt": "2026-11-14",
+        "designId": "DAHSntvAMxc"
+      }
+    },
+    {
+      "id": "bat-bss-300",
+      "category": "residential-batteries",
+      "name": "TEEMTEC BAT-BSS-300",
+      "description": "300Ah, 51.2V LiFePO4 residential energy storage battery.",
+      "image": null,
+      "url": null,
+      "status": "published",
+      "specifications": [
+        [
+          "Product Model",
+          "BAT-BSS-300"
+        ],
+        [
+          "Nominal Capacity",
+          "300Ah"
+        ],
+        [
+          "Nominal Voltage",
+          "51.2V"
+        ],
+        [
+          "Battery Type",
+          "LiFePO4 Battery"
+        ],
+        [
+          "Cycle Life",
+          "≥8000 Cycles (25°C ± 2°C, 0.5C charge–discharge, DOD ≥ 80%)"
+        ],
+        [
+          "Operating Voltage Range",
+          "43.2–57.6V"
+        ],
+        [
+          "Max. Charging Current",
+          "200A"
+        ],
+        [
+          "Max. Discharging Current",
+          "200A"
+        ],
+        [
+          "Recommended Charge / Discharge Current",
+          "≤100A"
+        ],
+        [
+          "Communication Interface",
+          "CAN / RS485 / RS232"
+        ],
+        [
+          "Charge Temperature",
+          "0°C to 55°C"
+        ],
+        [
+          "Discharge Temperature",
+          "−10°C to 55°C"
+        ],
+        [
+          "Ingress Protection Rating",
+          "IP21"
+        ],
+        [
+          "Max. Parallel Connections",
+          "16 Units"
+        ],
+        [
+          "Humidity",
+          "0%–95% (Non-condensing)"
+        ],
+        [
+          "Warranty",
+          "5 Years"
+        ],
+        [
+          "Installation Type",
+          "Floor Standing"
+        ],
+        [
+          "Dimensions",
+          "485 × 246 × 780mm"
+        ],
+        [
+          "Net Weight",
+          "118kg"
+        ]
+      ],
+      "relatedProductIds": [],
+      "source": {
+        "page": 9,
+        "checkedAt": "2026-11-14",
+        "designId": "DAHSntvAMxc"
+      }
+    },
+    {
+      "id": "bat-bss-314",
+      "category": "residential-batteries",
+      "name": "TEEMTEC BAT-BSS-314",
+      "description": "314Ah, 51.2V LiFePO4 residential energy storage battery.",
+      "image": null,
+      "url": null,
+      "status": "published",
+      "specifications": [
+        [
+          "Product Model",
+          "BAT-BSS-314"
+        ],
+        [
+          "Nominal Capacity",
+          "314Ah"
+        ],
+        [
+          "Nominal Voltage",
+          "51.2V"
+        ],
+        [
+          "Battery Type",
+          "LiFePO4 Battery"
+        ],
+        [
+          "Cycle Life",
+          "≥8000 Cycles (25°C ± 2°C, 0.5C charge–discharge, DOD ≥ 80%)"
+        ],
+        [
+          "Operating Voltage Range",
+          "43.2–57.6V"
+        ],
+        [
+          "Max. Charging Current",
+          "200A"
+        ],
+        [
+          "Max. Discharging Current",
+          "200A"
+        ],
+        [
+          "Recommended Charge / Discharge Current",
+          "≤100A"
+        ],
+        [
+          "Communication Interface",
+          "CAN / RS485 / RS232"
+        ],
+        [
+          "Charge Temperature",
+          "0°C to 55°C"
+        ],
+        [
+          "Discharge Temperature",
+          "−10°C to 55°C"
+        ],
+        [
+          "Ingress Protection Rating",
+          "IP21"
+        ],
+        [
+          "Max. Parallel Connections",
+          "16 Units"
+        ],
+        [
+          "Humidity",
+          "0%–95% (Non-condensing)"
+        ],
+        [
+          "Warranty",
+          "5 Years"
+        ],
+        [
+          "Installation Type",
+          "Floor Standing"
+        ],
+        [
+          "Dimensions",
+          "485 × 246 × 780mm"
+        ],
+        [
+          "Net Weight",
+          "131kg"
+        ]
+      ],
+      "relatedProductIds": [],
+      "source": {
+        "page": 9,
+        "checkedAt": "2026-11-14",
+        "designId": "DAHSntvAMxc"
+      }
+    }
+  ]
 }
