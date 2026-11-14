@@ -1,0 +1,30 @@
+{
+  "schemaVersion": 1,
+  "categories": [
+    {
+      "id": "residential-batteries",
+      "name": "Residential Lithium Batteries"
+    },
+    {
+      "id": "hybrid-inverters",
+      "name": "Hybrid Solar Inverters"
+    },
+    {
+      "id": "three-phase-inverters",
+      "name": "Three-Phase Inverters"
+    },
+    {
+      "id": "solar-panels",
+      "name": "Solar Panels"
+    },
+    {
+      "id": "commercial-storage",
+      "name": "C&I Energy Storage"
+    },
+    {
+      "id": "accessories",
+      "name": "Solar Accessories"
+    }
+  ],
+  "products": []
+}
